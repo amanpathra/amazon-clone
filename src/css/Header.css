@@ -1,0 +1,122 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 6px 20px;
+    margin-top: 16px;
+}
+
+.header__search{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.header__searchInput{
+    height: 38px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.header__searchIcon{
+    padding: 5px;
+    height: 38px !important;
+    width: 38px !important;
+    background-color: #cd9842;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option{
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    color: white;
+}
+
+.header__optionLineOne{
+    font-size: 12px;
+}
+
+.header__optionLineTwo{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header__optionBasket{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header__basketCount{
+    margin: 0 15px 0 8px;
+}
+
+@media screen and (max-width: 500px) {
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 50px 50px;
+    }
+
+    .header>*:nth-child(1){
+        place-self: center;
+        padding-top: 17px;
+    }
+
+    .header>*:nth-child(2){
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        place-self: center;
+    }
+
+    .header>*:nth-child(3){
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-top: 7px;
+    }
+
+    .header__logo{
+        height: 30px;
+        margin: 0;
+    }
+
+    .header__option:nth-child(2), .header__option:nth-child(3){
+        display: none;
+    }
+
+    .header__searchInput{
+        width: 85vw;
+    }
+
+    .header__nav{
+        justify-content: space-between;
+    }
+
+    .header__nav>*:last-child{
+        margin-right: 10px;
+    }
+    .header__nav>*:first-child{
+        margin-left: 10px;
+    }
+}
